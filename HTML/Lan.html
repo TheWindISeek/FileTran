@@ -2,9 +2,128 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>局域网文件传输</title>
 </head>
 <body>
+<!--提示信息-->
+<div class="msg">
+    <p>请输入</p>
+    <p id="ip-address">ip address</p>
+    <p>:</p>
+    <p id="port">port</p>
+    <p>来访问服务器</p>
+</div>
+<!--文件列表们-->
+<div class="fileLists">
+    <!--服务器文件列表-->
+    <div class="fileLists-serviceFileList">
+        <!--服务器文件提示信息-->
+        <div class="fileLists-serviceFileList-msg">
+            <p>服务器文件列表</p>
+        </div>
+        <!--文件头-->
+        <div class="fileHead">
+            <!--文件名称-->
+            <div class="fileHead-fileName">
+                <p>文件名</p>
+            </div>
+            <!--文件类型-->
+            <div class="fileHead-fileType">
+                <p>类型</p>
+            </div>
+            <!--文件大小-->
+            <div class="fileHead-fileSize">
+                <p>文件大小</p>
+            </div>
+        </div>
+        <!--具体文件内容-->
+        <div class="content-fileList-body">
+            <!--具体项-->
+            <div class="file">
+                <p class="fileName">compile.c</p>
+                <p class="fileType">.c</p>
+                <p class="fileSize">12.3MB</p>
+            </div>
+        </div>
+    </div>
+    <!--上传-->
+    <div class="fileLists-upload">
+        <!--上传文件提示信息-->
+        <div class="fileLists-upload-msg">
+            <p>上传文件列表</p>
+        </div>
+        <!--上传按钮-->
+        <div class="fileLists-upload-button">
+            <!--如果有可能 希望这里是图片而不是文字-->
+            <button><i></i><span>上传</span></button>
+        </div>
+        <!--上传文件列表-->
+        <div class="fileLists-upload-fileList">
+            <!--文件头-->
+            <div class="fileHead">
+                <!--文件名称-->
+                <div class="fileHead-fileName">
+                    <p>文件名</p>
+                </div>
+                <!--文件类型-->
+                <div class="fileHead-fileType">
+                    <p>类型</p>
+                </div>
+                <!--文件大小-->
+                <div class="fileHead-fileSize">
+                    <p>文件大小</p>
+                </div>
+            </div>
+            <!--具体文件内容-->
+            <div class="content-fileList-body">
+                <!--具体项-->
+                <div class="file">
+                    <p class="fileName">compile.c</p>
+                    <p class="fileType">.c</p>
+                    <p class="fileSize">12.3MB</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--下载-->
+    <div class="fileLists-download">
+        <!--下载文件提示信息-->
+        <div class="fileList-download-msg">
+            <p>下载文件列表</p>
+        </div>
+        <!--下载按钮-->
+        <div class="fileLists-download-button">
+            <button><i></i><span>下载</span></button>
+        </div>
+        <!--下载文件列表-->
+        <div class="fileList-download-fileList">
+            <!--文件头-->
+            <div class="fileHead">
+                <!--文件名称-->
+                <div class="fileHead-fileName">
+                    <p>文件名</p>
+                </div>
+                <!--文件类型-->
+                <div class="fileHead-fileType">
+                    <p>类型</p>
+                </div>
+                <!--文件大小-->
+                <div class="fileHead-fileSize">
+                    <p>文件大小</p>
+                </div>
+            </div>
+            <!--具体文件内容-->
+            <div class="content-fileList-body">
+                <!--具体项-->
+                <div class="file">
+                    <p class="fileName">compile.c</p>
+                    <p class="fileType">.c</p>
+                    <p class="fileSize">12.3MB</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

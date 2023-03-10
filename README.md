@@ -108,3 +108,28 @@
 		 
 ```
 
+# 文件夹说明
+## .vs
+之前上传github仓库总是失败 所以使用了vs打开了这个文件夹 因此就创建了.vs文件
+
+## Css
+这个文件夹放所有的样式表
+每个样式表的名字对应一个Html文件
+由于我认为我们的HTML还没有复杂到需要多个CSS来做样式 
+因此是Css和HTML是一对一的关系
+## Hmtl
+放主体的HTML文件
+Lan.html : 局域网下互传的页面
+login.html : 登录页面
+main.html : 主页面
+manage.html : 管理者页面
+user.html : 用户页面
+
+## images
+放用到的图片素材
+
+## JS
+放未来可能用到的JS代码
+
+## README.md
+一些说明和后续修改
