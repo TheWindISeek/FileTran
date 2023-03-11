@@ -3,77 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <title>主页</title>
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <!--导航栏-->
-<div id="FT-header">
-    <!--导航栏左部-->
-    <div class="toolbar-left">
-        <!--        logo图标-->
+<div class="FT-header box_style_1">
+	居中
+	<div class="FT-header_container box_style_5 child_horizontal ">
+		水平排版区域(元素1)
+		<!--        logo图标-->
         <div class="toolbar-logo">
-            <img src="../images/logo.jpg" alt="logo">
+            <img src="../images/logo.jpg" title="(LOGO)" alt="logo">
         </div>
-        <!--        一系列跳转网页-->
-        <ul class="toolbar-left-menus">
-            <li title="首页">
+		(元素2)
+		<!--        一系列跳转网页-->
+        <ul class="toolbar-left-menus child_horizontal child_vertical">
+            <li class=" common_box" title="首页">
                 <!--modify-->
                 <a href="main.html">
                     首页
                 </a>
             </li>
-
-            <li title="局域网传输">
+            <li class="common_box" title="局域网传输">
                 <!--modify-->
                 <a href="main.html">
                     局域网传输
                 </a>
             </li>
-            <li title="留言本">
+            <li class="common_box"title="留言本">
                 <!--modify-->
                 <a href="main.html">
                     留言本
                 </a>
-            </li>
+			</li>
         </ul>
-    </div>
-    <!--导航栏中部-->
-    <div class="toolbar-middle">
-        <input id="toolbar-search-input" maxlength="2000" autocomplete="off" type="text" value=""
-               placeholder="add framework support" style="text-indent: 12px;">
-        <button id="toolbar-search-button"><i></i><span>搜索</span></button>
-    </div>
-    <!--导航栏右部-->
-    <div class="toolbar-right">
-        <div class="toolbar-right-onlyUser">
+		<!--跳转网页结束-->
+		<!--输入框与搜索键-->
+		(元素3)
+		<input id="toolbar-search-input"
+			   maxlength="2000"
+			   autocomplete="off"
+			   type="text"
+			   value=""
+               placeholder="add framework support"
+			   style="text-indent: 12px;">
+		(元素4)
+        <button id="toolbar-search-button">
+			<i></i>
+			<span>搜索</span>
+		</button>
+		(元素5)
+		<!--输入框与搜索键结束-->
+		<!--右侧用户信息-->
+		<div class="toolbar-right-onlyUser child_horizontal">
             <div class="toolbar-right-btn-user">
-                <a href="main.html">
+                <a class="common_box" href="main.html">
                     用户
                 </a>
             </div>
             <div class="toolbar-right-btn-shopping">
-                <a href="main.html">
+                <a class="common_box" href="main.html">
                     购物车
                 </a>
             </div>
             <div class="toolbar-right-btn-logging">
-                <a href="main.html">
+                <a class="common_box" href="main.html">
                     登录
                 </a>
             </div>
         </div>
-    </div>
+		<!--右侧用户信息结束-->
+	</div>
 </div>
 
 
-<!--主体栏-->
-<div class="FT-body">
-    <!--    选择栏-->
-    <div class="index-sidebar">
-        <div class="scrolling-content">
-            <!--            选择栏主体-->
+<!--主体栏,附带滚动翻页,大小固定-->
+<div class="FT-body box_style_2">
+    <!--    选择栏,由内部元素数量调整大小 -->
+    <div class="index-sidebar box_style_3">
+		可翻页的侧栏
+		<!--    选择栏-->
             <div class="sidebar-browse">
                 <!--                后缀选择-->
-                <section class="sidebar_browse_group">
+                <section class="sidebar_browse_group  common_box">
                     <dl>
                         <dt class="tit">
                             <b title="只对前4万条记录分组">后缀</b>
@@ -108,8 +120,9 @@
                         </dd>
                     </dl>
                 </section>
+				<!--后缀选择结束-->
                 <!--                用途选择-->
-                <section class="sidebar_browse_group">
+                <section class="sidebar_browse_group common_box">
                     <dl>
                         <dt class="tit">
                             <b title="只对前4万条记录分组">用途</b>
@@ -135,8 +148,9 @@
                         </dd>
                     </dl>
                 </section>
+				<!--用途选择结束-->
                 <!--                大小选择-->
-                <section class="sidebar_browse_group">
+                <section class="sidebar_browse_group  common_box">
                     <b title="只对前4万条记录分组">大小</b>
                     <input id="sidebar-search-input-left" maxlength="2000" autocomplete="off" type="text" value=""
                            placeholder="0" style="text-indent: 12px;">
@@ -144,8 +158,9 @@
                     <input id="sidebar-search-input-right" maxlength="2000" autocomplete="off" type="text" value=""
                            placeholder="50" style="text-indent: 12px;">
                 </section>
+				<!--大小选择结束-->
                 <!--                猜你喜欢-->
-                <section class="sidebar_browse_group">
+                <section class="sidebar_browse_group  common_box">
                     <dl>
                         <dt class="tit">
                             <b title="只对前4万条记录分组">猜你喜欢</b>
@@ -165,18 +180,21 @@
                         </dd>
                     </dl>
                 </section>
-            </div>
+				<!--猜你喜欢结束-->
             <!--            选择栏底框-->
             <section class="blog_post_section">
                 <h2>By JeffreySharp and ...</h2>
             </section>
+            <!--选择栏底框结束-->
         </div>
-    </div>
+	</div>
     <!--    文件显示框-->
-    <div class="file-choose">
+    <div class="file-choose box_style_4">
+		<!--    文件显示框-->
+		主体部分,可上下翻页
         <!--        过滤器-->
-        <div class="file-choose-filter">
-            <ul class="file-choose-filter-middle">
+        <div class="file-choose-filter box_style_3 child_list_notype">
+            <ul class="file-choose-filter-mddle">
                 <li class="file-choose-filter-item">
                     名称
                 </li>
@@ -189,7 +207,7 @@
             </ul>
         </div>
         <!--        文件容纳器-->
-        <div class="file-choose-container">
+        <div class="file-choose-container child_box file_container_size">
             <!--            文件块-->
             <div class="file">
                 <!--                点击链接跳转到更具体的介绍页面-->
@@ -234,8 +252,8 @@
                     </div>
                     <!--                文件类型-->
                     <div>
-                        .zip
-                    </div>
+                      .zip-------------------------
+                  </div>
                     <!--                文件大小-->
                     <div>
                         880MB
@@ -244,27 +262,12 @@
             </div>
         </div>
     </div>
-
 </div>
 
 
 <!--底部-->
-<div class="FT-footer">
-    <div>
-        <a href="main.html">
-            联系我们
-        </a>
-    </div>
-    <div>
-        <a href="main.html">
-            问题反馈
-        </a>
-    </div>
-    <div>
-        <a href="main.html">
-            加入我们
-        </a>
-    </div>
+<div class="FT-footer box_style_3">
+	底部
 </div>
 
 </body>
