@@ -7,30 +7,27 @@
 </head>
 <body>
 <!--导航栏-->
-<div class="FT-header box_style_1">
-	居中
-	<div class="FT-header_container box_style_5 child_horizontal ">
-		水平排版区域(元素1)
+<div class="FT-header common_box">
+	<div class="FT-header_container child_horizontal ">
 		<!--        logo图标-->
         <div class="toolbar-logo">
             <img src="../images/logo.jpg" title="(LOGO)" alt="logo">
         </div>
-		(元素2)
 		<!--        一系列跳转网页-->
-        <ul class="toolbar-left-menus child_horizontal child_vertical">
-            <li class=" common_box" title="首页">
+        <ul class="toolbar-left-menus child_horizontal child_vertical child_box">
+            <li title="首页">
                 <!--modify-->
                 <a href="main.html">
                     首页
                 </a>
             </li>
-            <li class="common_box" title="局域网传输">
+            <li title="局域网传输">
                 <!--modify-->
                 <a href="main.html">
                     局域网传输
                 </a>
             </li>
-            <li class="common_box"title="留言本">
+            <li title="留言本">
                 <!--modify-->
                 <a href="main.html">
                     留言本
@@ -39,7 +36,6 @@
         </ul>
 		<!--跳转网页结束-->
 		<!--输入框与搜索键-->
-		(元素3)
 		<input id="toolbar-search-input"
 			   maxlength="2000"
 			   autocomplete="off"
@@ -47,12 +43,10 @@
 			   value=""
                placeholder="add framework support"
 			   style="text-indent: 12px;">
-		(元素4)
         <button id="toolbar-search-button">
 			<i></i>
 			<span>搜索</span>
 		</button>
-		(元素5)
 		<!--输入框与搜索键结束-->
 		<!--右侧用户信息-->
 		<div class="toolbar-right-onlyUser child_horizontal">
@@ -78,14 +72,14 @@
 
 
 <!--主体栏,附带滚动翻页,大小固定-->
-<div class="FT-body box_style_2">
+<div class="FT-body">
     <!--    选择栏,由内部元素数量调整大小 -->
-    <div class="index-sidebar box_style_3">
+    <div class="index-sidebar common_border">
 		可翻页的侧栏
 		<!--    选择栏-->
             <div class="sidebar-browse">
                 <!--                后缀选择-->
-                <section class="sidebar_browse_group  common_box">
+                <section class="sidebar_browse_group common_box">
                     <dl>
                         <dt class="tit">
                             <b title="只对前4万条记录分组">后缀</b>
@@ -189,11 +183,11 @@
         </div>
 	</div>
     <!--    文件显示框-->
-    <div class="file-choose box_style_4">
+    <div class="file-choose common_border">
 		<!--    文件显示框-->
 		主体部分,可上下翻页
         <!--        过滤器-->
-        <div class="file-choose-filter box_style_3 child_list_notype">
+        <div class="file-choose-filter common_box child_list_notype">
             <ul class="file-choose-filter-mddle">
                 <li class="file-choose-filter-item">
                     名称
@@ -266,8 +260,19 @@
 
 
 <!--底部-->
-<div class="FT-footer box_style_3">
+<div class="FT-footer child_box child_horizontal">
 	底部
+	<div class="child_horizontal">
+		<div>
+		联系我们
+		</div>
+		<div>
+		问题反馈
+		</div>
+		<div>
+			加入我们
+		</div>
+	</div>
 </div>
 
 </body>
