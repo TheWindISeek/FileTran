@@ -74,37 +74,37 @@
 <!--主体栏,附带滚动翻页,大小固定-->
 <div class="FT-body">
     <!--    选择栏,由内部元素数量调整大小 -->
-    <div class="index-sidebar common_border">
+    <div class="index-sidebar common_child_pos_limit_10 common_box_3">
 		可翻页的侧栏
 		<!--    选择栏-->
-            <div class="sidebar-browse">
+            <div class="sidebar-browse child_common_box_2 child_size_limit">
                 <!--                后缀选择-->
-                <section class="sidebar_browse_group common_box">
+                <section class="sidebar_browse_group">
                     <dl>
                         <dt class="tit">
                             <b title="只对前4万条记录分组">后缀</b>
                         </dt>
-                        <dd class="sidebar-checkbox">
+                        <dd class="sidebar-checkbox sidebar-checkbox_multiple">
                             <ul>
-                                <li style="display: list-item;">
+                                <li>
                                     <label>
                                         <input type="checkbox" value=".zip">
                                         <a href="javascript:void(0)" title=".zip">.zip</a>
                                     </label>
                                 </li>
-                                <li style="display: list-item;">
+                                <li>
                                     <label>
                                         <input type="checkbox" value=".c">
                                         <a href="javascript:void(0)" title=".c">.c</a>
                                     </label>
                                 </li>
-                                <li style="display: list-item;">
+                                <li>
                                     <label>
                                         <input type="checkbox" value=".pdf">
                                         <a href="javascript:void(0)" title=".pdf">.pdf</a>
                                     </label>
                                 </li>
-                                <li style="display: list-item;">
+                                <li>
                                     <label>
                                         <input type="checkbox" value=".java">
                                         <a href="javascript:void(0)" title=".java">.java</a>
@@ -116,20 +116,20 @@
                 </section>
 				<!--后缀选择结束-->
                 <!--                用途选择-->
-                <section class="sidebar_browse_group common_box">
+                <section class="sidebar_browse_group sidebar-checkbox_multiple">
                     <dl>
                         <dt class="tit">
                             <b title="只对前4万条记录分组">用途</b>
                         </dt>
                         <dd class="sidebar-checkbox">
                             <ul>
-                                <li style="display: list-item;">
+                                <li>
                                     <label>
                                         <input type="checkbox" value="程序">
                                         <a href="javascript:void(0)" title="程序">程序</a>
                                     </label>
                                 </li>
-                                <li style="display: list-item;">
+                                <li>
                                     <label>
                                         <input type="checkbox" value="表">
                                         <a href="javascript:void(0)" title="表">表</a>
@@ -144,27 +144,39 @@
                 </section>
 				<!--用途选择结束-->
                 <!--                大小选择-->
-                <section class="sidebar_browse_group  common_box">
+                <section class="sidebar_browse_group">
                     <b title="只对前4万条记录分组">大小</b>
-                    <input id="sidebar-search-input-left" maxlength="2000" autocomplete="off" type="text" value=""
-                           placeholder="0" style="text-indent: 12px;">
-                    <p>-</p>
-                    <input id="sidebar-search-input-right" maxlength="2000" autocomplete="off" type="text" value=""
-                           placeholder="50" style="text-indent: 12px;">
+					<div>
+                    	<input id="sidebar-search-input-left"
+							   maxlength="2000"
+							   autocomplete="off"
+							   type="text"
+							   value=""
+							   placeholder="0"
+							   style="text-indent: 12px;">
+                    	<p>-</p>
+                    	<input id="sidebar-search-input-right"
+							   maxlength="2000"
+							   autocomplete="off"
+							   type="text"
+							   value=""
+							   placeholder="50"
+							   style="text-indent: 12px;">
+					</div>
                 </section>
 				<!--大小选择结束-->
                 <!--                猜你喜欢-->
-                <section class="sidebar_browse_group  common_box">
+                <section class="sidebar_browse_group">
                     <dl>
                         <dt class="tit">
                             <b title="只对前4万条记录分组">猜你喜欢</b>
                         </dt>
-                        <dd class="sidebar-checkbox">
+                        <dd class="sidebar-checkbox sidebar-checkbox_multiple">
                             <ul>
-                                <li style="display: list-item;">
+                                <li>
                                     <a href="javascript:void(0)" title="C语言源程序">C语言源程序</a>
                                 </li>
-                                <li style="display: list-item;">
+                                <li>
                                     <a href="javascript:void(0)" title="表格">表格</a>
                                 </li>
                                 <li>
@@ -183,11 +195,11 @@
         </div>
 	</div>
     <!--    文件显示框-->
-    <div class="file-choose common_border">
+    <div class="file-choose common_child_pos_limit">
 		<!--    文件显示框-->
 		主体部分,可上下翻页
         <!--        过滤器-->
-        <div class="file-choose-filter common_box child_list_notype">
+        <div class="file-choose-filter common_box_2 child_list_notype">
             <ul class="file-choose-filter-mddle">
                 <li class="file-choose-filter-item">
                     名称
@@ -201,7 +213,7 @@
             </ul>
         </div>
         <!--        文件容纳器-->
-        <div class="file-choose-container child_box file_container_size">
+        <div class="file-choose-container child_box file_container_size common_child_spacing_limit_5 common_child_pos_limit_5">
             <!--            文件块-->
             <div class="file">
                 <!--                点击链接跳转到更具体的介绍页面-->
