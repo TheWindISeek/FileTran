@@ -2,102 +2,9 @@ html,body{
 	/*强制网页显示为全屏大小,横向不可滚动纵向可以滚动*/
     margin: 0;
     max-width: 100%;
-	min-height: 100%;
-    overflow-x: hidden;
-}
-.test_box_style_1{
-	/*测试风格1*/
-    background-color: #ff0000;
-    border-style: inset;
-    border-color: #797979;
-}
-.test_box_style_2{
-	/*测试风格2*/
-    background-color: #00ff00;
-    border-style: inset;
-    border-color: #797979;
-}
-.test_box_style_3{
-	/*测试风格3*/
-    background-color: #0000ff;
-    border-style: inset;
-    border-color: #797979;
-}
-.test_box_style_4{
-	/*测试风格4*/
-    background-color: #ff00ff;
-    border-style: inset;
-    border-color: #797979;
-}
-.test_box_style_5{
-	/*测试风格5*/
-    background-color: #00ffff;
-    border-style: inset;
-    border-color: #797979;
-}
-.common_box_1{
-    /*常规格子深灰底黑色边框*/
-    background-color: #7f7f7f;
-    border: thick inset #000000;
-}
-.child_common_box_1 >*{
-    /*子节点深灰底黑色边框*/
-    background-color: #7f7f7f;
-    border: thick inset #000000;
-}
-.common_box_2{
-    /*常规格子浅灰底灰色边框*/
-    background-color: #D7D7D7;
-    border: thick inset #7f7f7f;
-}
-.child_common_box_2 >*{
-    /*子节点浅灰底灰色边框*/
-    background-color: #D7D7D7;
-    border: thick inset #7f7f7f;
-}
-.common_box_3{
-    /*常规格子白底浅灰边框*/
-    background-color: #ffffff;
-    border: thick inset #D7D7D7;
-}
-.child_common_box_3 >*{
-    /*子节点白底浅灰边框*/
-    background-color: #ffffff;
-    border: thick inset #D7D7D7;
-}
-.common_child_pos_limit_5{
-    /*常规子节点位置限制*/
-    padding-top: 5px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-    padding-left: 5px;
-}
-.common_child_pos_limit_10{
-    /*常规子节点位置限制*/
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-}
-.common_child_spacing_limit_5 *{
-	/*常规子节点间距限制*/
-    margin-top: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-}
-.common_child_spacing_limit_10 *{
-	/*常规子节点间距限制*/
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-}
-.child_box >*{
-	/*子类设置为常规格子*/
-    background-color: #D7D7D7;
-    border-style: inset;
-    border-color: #797979;
+	min-width:600px;
+	min-height: inherit;
+    overflow-x: auto;
 }
 .file_container_size >*{
 	/*子类被设置为文件格子*/
@@ -119,42 +26,48 @@ html,body{
 }
 .FT-header {
     width: 100%;
-    height: 150px;
-	max-height: 12%;
-	min-height: 6%;
+    height: 48px;
 	/*
     position: absolute;
     top: 0px;
     bottom: auto;
 	*/
     text-align: center;
-    overflow-x: auto;
+	overflow: hidden;
+    /*overflow-x: auto;*/
+	line-height: 48px;
     z-index: 3;
 }
+/*
+.FT-header *{
+    height:inherit;
+}
+*/
 .FT-header_container {
 	min-width: 700px;
 }
-.toolbar-left-menus {
-}
 .toolbar-logo *{
 	width: 100px;
-	height: 100px;
+	height: 48px;
 }
 .FT-body {
     width: 100%;
+	max-width: 1200px;
     /*
     top: 200px;
     bottom: 100px;
 	*/
     z-index: 2;
-	display: flex;
+    display: flex;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
 }
 
 .FT-footer {
     width: 100%;
-    height: 100px;
-	max-height: 8%;
-	min-height: 4%;
+    height: 64px;
 	/*
     position: absolute;
     top: auto;
@@ -166,6 +79,7 @@ html,body{
 .index-sidebar {
     width: 300px;
     max-width: 30%;
+    min-width: 150px;
     height: inherit;
     float: left;
     overflow-y: auto;
@@ -195,17 +109,47 @@ html,body{
 .file-choose-filter {
     margin-left: 10px;
     margin-right: 10px;
+}.toolbar-left {
+    display: flex;
+    float: left;
+    padding-left: 24px;
+    padding-right: 24px;
 }
-
-
-.child_horizontal >* {
-    display: inline;
-    text-align: center;
-}
-.child_vertical >* {
-	align-self:center;
-}
-.child_size_limit >*{
-    overflow-x: auto;
-    overflow-y: auto;
+/*
+.toolbar-left >*{
+     min-height: 48px;
+}*/
+.toolbar-center {
+	-webkit-box-flex: 1;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0%;
+    display: flex;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+	box-sizing: border-box;
+}/*
+.toolbar-right >*{
+     min-height: 48px;
+}*/
+.toolbar-right {
+    display: flex;
+    float: right;
+    padding-left: 24px;
+    padding-right: 24px;
+}/*
+.toolbar-right >*{
+    min-height: 48px;
+}*/
+.toolbar-left-menus{
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
 }

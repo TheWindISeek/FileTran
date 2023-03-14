@@ -1,0 +1,105 @@
+html,body{
+    /*强制网页显示为全屏大小,横向不可滚动纵向可以滚动*/
+    margin: 0px;
+	width:1920px;
+	height:1680px;
+    overflow-x: hidden;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+	background-color: darkgray;
+}
+.top {
+    width: 1820px;
+    height: 134px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 85px;
+    left: 82px;
+}
+.bottom{
+    width: 1803px;
+    height: 1290px;
+    position: absolute;
+    left: 85px;
+    top: 274px;
+}
+
+.left {
+    position: absolute;
+    left: 58px;
+    top: 70px;
+}
+.left * {
+    width: 676px;
+    height: 1074px;
+    float: left;
+}
+.right {
+    width: 873px;
+    height: 1074px;
+    float: left;
+    position: absolute;
+    left: 865px;
+    top: 70px;
+}
+
+.right-login {
+    width: 797px;
+    height: 754px;
+    position: absolute;
+    left: 49px;
+    top: 46px;
+}
+.right-login-info {
+    width: 681px;
+    height: 145px;
+    position: absolute;
+    left: 49px;
+    top: 400px;
+}
+.right-login-userName {
+    width: 681px;
+    height: 126px;
+    position: absolute;
+    left: 49px;
+    top: 265px;
+}
+.right-login-password {
+    width: 681px;
+    height: 145px;
+    position: absolute;
+    left: 49px;
+    top: 524px;
+}
+
+.right-login-log {
+    width: 681px;
+    height: 145px;
+    position: absolute;
+    left: 49px;
+    top: 66px;
+}
+.right-other {
+    width: 797px;
+    height: 172px;
+    position: absolute;
+    left: 49px;
+    top: 854px;
+}
+.right-sign-up {
+    width: 247px;
+    height: 121px;
+    position: absolute;
+    left: 39px;
+    top: 26px;
+}
+.right-forget-password {
+    width: 337px;
+    height: 121px;
+    position: absolute;
+    left: 400px;
+    top: 26px;
+}
