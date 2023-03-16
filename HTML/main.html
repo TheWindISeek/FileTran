@@ -8,9 +8,9 @@
     <link href="../CSS/01_General_Box.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/02_Button.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body class="common_box_1">
 <!--导航栏-->
-<div class="FT-header child_horizontal">
+<div class="FT-header child_horizontal common_box_4">
 	<div class="FT-header_container">
 		<div class="toolbar-left child_horizontal">
 		<!--        logo图标-->
@@ -20,17 +20,17 @@
 		<!--        一系列跳转网页-->
         <ul class="toolbar-left-menus child_line_block">
             <a href="main.html" title="首页">
-				<button class="btnsize-120-48 custom-btn btn-9" >
+				<button class="btnsize-120-48 custom-btn btn-17" >
                     <span>首页</span>
 				</button>
             </a>
             <a href="main.html" title="局域网传输">
-				<button class="btnsize-120-48 custom-bt btn-7">
-                    <span>局域网传输</span>
+				<button class="btnsize-120-48 custom-btn btn-17">
+                    <span>局域网</span>
 				</button>
             </a>
             <a href="main.html" title="留言本">
-				<button class="btnsize-120-48 custom-btn btn-8">
+				<button class="btnsize-120-48 custom-btn btn-17">
                 <span>留言本</span>
 				</button>  
 			</a>
@@ -55,17 +55,17 @@
 		<div class="toolbar-right child_horizontal">
 		<div class="toolbar-right-onlyUser child_line_block">
             <a href="main.html">
-				<button class="btnsize-120-48 custom-btn btn-1">
+				<button class="btnsize-120-48 custom-btn btn-17">
                     <span>用户</span>
 				</button>
             </a>
             <a href="main.html">
-				<button class="btnsize-120-48 custom-btn btn-2">
+				<button class="btnsize-120-48 custom-btn btn-17">
                     <span>购物车</span>
 				</button>
             </a>
             <a href="main.html">
-				<button class="btnsize-120-48 custom-btn btn-3">
+				<button class="btnsize-120-48 custom-btn btn-17">
                     <span>登录</span>
 				</button>
             </a>
@@ -79,10 +79,10 @@
 <!--主体栏,附带滚动翻页,大小固定-->
 <div class="FT-body">
     <!--    选择栏,由内部元素数量调整大小 -->
-    <div class="index-sidebar common_child_pos_limit_10 common_box_3">
-		可翻页的侧栏
+    <div class="index-sidebar common_child_pos_limit_10 common_box_2">
+		可翻页的侧栏(这里是注释,后面会去掉)
 		<!--    选择栏-->
-            <div class="sidebar-browse child_common_box_2 child_size_limit">
+            <div class="sidebar-browse child_common_box_4 child_size_limit">
                 <!--                后缀选择-->
                 <section class="sidebar_browse_group">
                     <dl>
@@ -151,7 +151,7 @@
                 <!--                大小选择-->
                 <section class="sidebar_browse_group">
                     <b title="只对前4万条记录分组">大小</b>
-					<div>
+					<div class="range_selector child_line_block">
                     	<input id="sidebar-search-input-left"
 							   maxlength="2000"
 							   autocomplete="off"
@@ -194,17 +194,17 @@
 				<!--猜你喜欢结束-->
             <!--            选择栏底框-->
             <section class="blog_post_section">
-                <h2>By JeffreySharp and ...</h2>
+                <h2>By JeffreySharp and Mr.L</h2>
             </section>
             <!--选择栏底框结束-->
         </div>
 	</div>
     <!--    文件显示框-->
-    <div class="file-choose common_child_pos_limit">
+    <div class="file-choose common_box_3 common_child_pos_limit">
 		<!--    文件显示框-->
-		主体部分,可上下翻页
+		主体部分,可上下翻页(这里是注释,后面会去掉)
         <!--        过滤器-->
-        <div class="file-choose-filter common_box_2 child_list_notype">
+        <div class="file-choose-filter common_box_4 child_list_notype">
             <ul class="file-choose-filter-mddle">
                 <li class="file-choose-filter-item">
                     名称
@@ -218,57 +218,60 @@
             </ul>
         </div>
         <!--        文件容纳器-->
-        <div class="file-choose-container child_common_box_2 file_container_size common_child_spacing_limit_5 common_child_pos_limit_5">
+        <div class="file-choose-container child_common_box_4 file_container common_child_spacing_limit_5 common_child_pos_limit_5">
             <!--            文件块-->
-            <div class="file">
+            <div>
                 <!--                点击链接跳转到更具体的介绍页面-->
-                <a href="javascript:void(0)">
+                <a class="file" href="javascript:void(0)">
+            		<img class="file_img" src="../images/logo.jpg" title="(LOGO)"> 
                     <!--                文件名称-->
-                    <div>
+                    <p>
                         Content
-                    </div>
+                    </p>
                     <!--                文件类型-->
-                    <div>
+                    <p>
                         .java
-                    </div>
+                    </p>
                     <!--                文件大小-->
-                    <div>
+                    <p>
                         1MB
-                    </div>
+                    </p>
                 </a>
             </div>
-            <div class="file">
+            <div>
                 <!--                点击链接跳转到更具体的介绍页面-->
-                <a href="javascript:void(0)">
+                <a class="file" href="javascript:void(0)">
+            		<img class="file_img" src="../images/logo.jpg" title="(LOGO)"> 
                     <!--                文件名称-->
-                    <div>
+                    <p>
                         云计算导论
-                    </div>
+                    </p>
                     <!--                文件类型-->
-                    <div>
+                    <p>
                         .pdf
-                    </div>
+                    </p>
                     <!--                文件大小-->
-                    <div>
+                    <p>
                         16MB
-                    </div>
+                    </p>
                 </a>
             </div>
-            <div class="file">
+            <div>
                 <!--                点击链接跳转到更具体的介绍页面-->
-                <a href="javascript:void(0)">
+                <a class="file" href="javascript:void(0)">
+            		<img class="file_img" src="../images/logo.jpg" title="(LOGO)"> 
                     <!--                文件名称-->
-                    <div>
+                    <p>
                         IDEA
-                    </div>
+                    </p>
                     <!--                文件类型-->
-                    <div>
+                    <p>
                       .zip-------------------------
-                  </div>
+                    </p>
                     <!--                文件大小-->
-                    <div>
+                    <p>
                         880MB
-                    </div>
+                    </p>
                 </a>
             </div>
         </div>
@@ -277,18 +280,18 @@
 
 
 <!--底部-->
-<div class="FT-footer child_box child_horizontal">
-	底部
+<div class="FT-footer child_horizontal">
+	底部(这里是注释,后面会去掉)
 	<div class="child_horizontal">
-		<div>
+		<a href="main.html">
 		联系我们
-		</div>
-		<div>
+		</a>
+		<a href="main.html">
 		问题反馈
-		</div>
-		<div>
+		</a>
+		<a href="main.html">
 			加入我们
-		</div>
+		</a>
 	</div>
 </div>
 
