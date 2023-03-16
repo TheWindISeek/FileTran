@@ -1,109 +1,25 @@
 html,body{
-	/*强制网页显示为全屏大小,横向不可滚动纵向可以滚动*/
+    /*强制网页显示为全屏大小,横向不可滚动纵向可以滚动*/
     margin: 0;
     max-width: 100%;
-	min-height: 100%;
-    overflow-x: hidden;
+    min-width: 600px;
+    min-height: inherit;
+    overflow-x: auto;
+    color: #9cdcfe;
+    font-family: SimHei;
+	/*font-size:14pt*/
 }
-.test_box_style_1{
-	/*测试风格1*/
-    background-color: #ff0000;
-    border-style: inset;
-    border-color: #797979;
+a:link,a:visited{
+	font-family:Segoe UI Light;
+	/*font-size:24pt;*/
+	color:#bfbfbf;
+	text-decoration:none;
 }
-.test_box_style_2{
-	/*测试风格2*/
-    background-color: #00ff00;
-    border-style: inset;
-    border-color: #797979;
-}
-.test_box_style_3{
-	/*测试风格3*/
-    background-color: #0000ff;
-    border-style: inset;
-    border-color: #797979;
-}
-.test_box_style_4{
-	/*测试风格4*/
-    background-color: #ff00ff;
-    border-style: inset;
-    border-color: #797979;
-}
-.test_box_style_5{
-	/*测试风格5*/
-    background-color: #00ffff;
-    border-style: inset;
-    border-color: #797979;
-}
-.common_box_1{
-    /*常规格子深灰底黑色边框*/
-    background-color: #7f7f7f;
-    border: thick inset #000000;
-}
-.child_common_box_1 >*{
-    /*子节点深灰底黑色边框*/
-    background-color: #7f7f7f;
-    border: thick inset #000000;
-}
-.common_box_2{
-    /*常规格子浅灰底灰色边框*/
-    background-color: #D7D7D7;
-    border: thick inset #7f7f7f;
-}
-.child_common_box_2 >*{
-    /*子节点浅灰底灰色边框*/
-    background-color: #D7D7D7;
-    border: thick inset #7f7f7f;
-}
-.common_box_3{
-    /*常规格子白底浅灰边框*/
-    background-color: #ffffff;
-    border: thick inset #D7D7D7;
-}
-.child_common_box_3 >*{
-    /*子节点白底浅灰边框*/
-    background-color: #ffffff;
-    border: thick inset #D7D7D7;
-}
-.common_child_pos_limit_5{
-    /*常规子节点位置限制*/
-    padding-top: 5px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-    padding-left: 5px;
-}
-.common_child_pos_limit_10{
-    /*常规子节点位置限制*/
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-}
-.common_child_spacing_limit_5 *{
-	/*常规子节点间距限制*/
-    margin-top: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-}
-.common_child_spacing_limit_10 *{
-	/*常规子节点间距限制*/
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-}
-.child_box >*{
-	/*子类设置为常规格子*/
-    background-color: #D7D7D7;
-    border-style: inset;
-    border-color: #797979;
-}
-.file_container_size >*{
-	/*子类被设置为文件格子*/
-    width: 150px;
-    height: 225px;
-    float: left;
+a:hover
+{
+	/*font-size:24pt*/
+	color:#dfdfdf;
+	text-decoration:none;
 }
 .sidebar-checkbox ul li {
 	/*去掉列表圆点*/
@@ -119,60 +35,136 @@ html,body{
 }
 .FT-header {
     width: 100%;
-    height: 150px;
-	max-height: 12%;
-	min-height: 6%;
-	/*
-    position: absolute;
-    top: 0px;
-    bottom: auto;
-	*/
+    height: 48px;
     text-align: center;
-    overflow-x: auto;
+    overflow: hidden;
+    line-height: 48px;
     z-index: 3;
+    overflow-x: visible;
 }
 .FT-header_container {
-	min-width: 700px;
+    min-width: inherit;
+    height: 100%;
 }
-.toolbar-left-menus {
+.FT-header_container >*{
+    display: inline;	
+}
+.toolbar-left {
+    float: left;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 100%;
 }
 .toolbar-logo *{
-	width: 100px;
-	height: 100px;
+    width: 100px;
+    height: 48px;
+    float: left;
 }
+.toolbar-center {
+	/*
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+	*/
+	/*
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    box-sizing: border-box;
+    height: 100%;
+	*/
+	
+}/*
+.toolbar-right >*{
+     min-height: 48px;
+}*/
+.toolbar-right {
+    float: right;
+    padding-left: 24px;
+    padding-right: 24px;
+    height: 100%;
+}/*
+.toolbar-right >*{
+    min-height: 48px;
+}*/
+.toolbar-left-menus{
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    float: left;
+    height: 100%;
+}
+.toolbar-left-menus >*{
+    min-width: 120px;
+    height: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    float: left;
+}
+.toolbar-right-onlyUser{
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    float: right;
+    height: 100%;
+}
+.toolbar-right-onlyUser >*{
+    height: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    min-width: 120px;
+    float: right;
+}
+
 .FT-body {
     width: 100%;
-    /*
-    top: 200px;
-    bottom: 100px;
-	*/
+	max-width: 1200px;
     z-index: 2;
-	display: flex;
+    display: flex;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
 }
 
 .FT-footer {
     width: 100%;
-    height: 100px;
-	max-height: 8%;
-	min-height: 4%;
-	/*
-    position: absolute;
-    top: auto;
-    bottom: 0px;
-	*/
+    height: 64px;
     z-index: 1;
     text-align: center;
 }
 .index-sidebar {
     width: 300px;
     max-width: 30%;
+    min-width: 180px;
     height: inherit;
     float: left;
     overflow-y: auto;
 }
 .sidebar-browse >*{
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    border-radius: 16px;
+    padding-left: 15px;
+    padding-top: 10px;
+    list-style-type: none;
 }
+.sidebar_browse_group {
+}
+
 .sidebar-checkbox >ul{
     list-style-type: none;
 }
@@ -184,28 +176,50 @@ html,body{
 	/*多选列表父容器用*/
 	display: list-item;
 }
+.range_selector {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+.range_selector >* {
+    max-width: 33%;
+    text-align: center;
+}
 .file-choose{
     height: inherit;
     width: 100%;
     background-color: #797979;
     overflow-y: auto;
     overflow-x: hidden;
-    border: thick solid #797979;
 }
 .file-choose-filter {
     margin-left: 10px;
     margin-right: 10px;
+    border-radius: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
-
-
-.child_horizontal >* {
-    display: inline;
-    text-align: center;
+.file-choose-filter-mddle >*{
+    margin-bottom: 5px;
 }
-.child_vertical >* {
-	align-self:center;
+.file_container >*{
+    /*子类被设置为文件格子*/
+    width: 150px;
+    height: 225px;
+    float: left;
+    border-radius: 10px;
+    border: medium solid rgba(0,0,0,1.00);
 }
-.child_size_limit >*{
-    overflow-x: auto;
-    overflow-y: auto;
+.file >p{
+	white-space: nowrap;
+    max-width: 128px;
+    overflow: hidden;    
+ 	text-overflow: ellipsis; 
+}
+.file_container >*:hover{
+    border: medium solid #7f7f7f;
+}
+.file_img{
+	width: 128px;
+    height: 128px;
 }
