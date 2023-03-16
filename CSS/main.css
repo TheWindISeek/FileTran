@@ -1,16 +1,25 @@
 html,body{
-	/*强制网页显示为全屏大小,横向不可滚动纵向可以滚动*/
+    /*强制网页显示为全屏大小,横向不可滚动纵向可以滚动*/
     margin: 0;
     max-width: 100%;
-	min-width:600px;
-	min-height: inherit;
+    min-width: 600px;
+    min-height: inherit;
     overflow-x: auto;
+    color: #9cdcfe;
+    font-family: SimHei;
+	/*font-size:14pt*/
 }
-.file_container_size >*{
-	/*子类被设置为文件格子*/
-    width: 150px;
-    height: 225px;
-    float: left;
+a:link,a:visited{
+	font-family:Segoe UI Light;
+	/*font-size:24pt;*/
+	color:#bfbfbf;
+	text-decoration:none;
+}
+a:hover
+{
+	/*font-size:24pt*/
+	color:#dfdfdf;
+	text-decoration:none;
 }
 .sidebar-checkbox ul li {
 	/*去掉列表圆点*/
@@ -31,7 +40,6 @@ html,body{
     overflow: hidden;
     line-height: 48px;
     z-index: 3;
-    /*background-image: linear-gradient(#ff7f00,#7f7f7f);*/
     overflow-x: visible;
 }
 .FT-header_container {
@@ -49,10 +57,6 @@ html,body{
     padding-bottom: 0px;
     height: 100%;
 }
-/*
-.toolbar-left >*{
-     min-height: 48px;
-}*/
 .toolbar-logo *{
     width: 100px;
     height: 48px;
@@ -146,15 +150,21 @@ html,body{
 .index-sidebar {
     width: 300px;
     max-width: 30%;
-    min-width: 150px;
+    min-width: 180px;
     height: inherit;
     float: left;
     overflow-y: auto;
 }
 .sidebar-browse >*{
     margin-bottom: 15px;
-	border-radius: 16px;
+    border-radius: 16px;
+    padding-left: 15px;
+    padding-top: 10px;
+    list-style-type: none;
 }
+.sidebar_browse_group {
+}
+
 .sidebar-checkbox >ul{
     list-style-type: none;
 }
@@ -166,15 +176,50 @@ html,body{
 	/*多选列表父容器用*/
 	display: list-item;
 }
+.range_selector {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+.range_selector >* {
+    max-width: 33%;
+    text-align: center;
+}
 .file-choose{
     height: inherit;
     width: 100%;
     background-color: #797979;
     overflow-y: auto;
     overflow-x: hidden;
-    border: thick solid #797979;
 }
 .file-choose-filter {
     margin-left: 10px;
     margin-right: 10px;
+    border-radius: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.file-choose-filter-mddle >*{
+    margin-bottom: 5px;
+}
+.file_container >*{
+    /*子类被设置为文件格子*/
+    width: 150px;
+    height: 225px;
+    float: left;
+    border-radius: 10px;
+    border: medium solid rgba(0,0,0,1.00);
+}
+.file >p{
+	white-space: nowrap;
+    max-width: 128px;
+    overflow: hidden;    
+ 	text-overflow: ellipsis; 
+}
+.file_container >*:hover{
+    border: medium solid #7f7f7f;
+}
+.file_img{
+	width: 128px;
+    height: 128px;
 }
