@@ -4,7 +4,7 @@ html,body{
     max-width: 100%;
     min-width: 600px;
     min-height: inherit;
-    overflow-x: auto;
+	overflow: visible;
     color: #9cdcfe;
     font-family: SimHei;
 	/*font-size:14pt*/
@@ -54,7 +54,7 @@ a:hover
 	float:left;
 }
 .toolbar-center {
-	flex: 1 0 260px;
+	flex: 1 0 300px;
     height: inherit;
 }
 .toolbar-right {
