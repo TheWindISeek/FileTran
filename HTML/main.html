@@ -5,41 +5,40 @@
     <title>主页</title>
     <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/00_Styles.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/01_General_Box.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/02_Button.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <!--导航栏-->
-<div class="FT-header common_box">
-	<div class="FT-header_container child_horizontal">
-		<div class="toolbar-left child_horizontal test_box_style_1">
+<div class="FT-header child_horizontal">
+	<div class="FT-header_container">
+		<div class="toolbar-left child_horizontal">
 		<!--        logo图标-->
         <div class="toolbar-logo">
             <img src="../images/logo.jpg" title="(LOGO)" alt="logo">
         </div>
 		<!--        一系列跳转网页-->
-        <ul class="toolbar-left-menus child_horizontal child_vertical child_box">
-            <li title="首页">
-                <!--modify-->
-                <a href="main.html">
-                    首页
-                </a>
-            </li>
-            <li title="局域网传输">
-                <!--modify-->
-                <a href="main.html">
-                    局域网传输
-                </a>
-            </li>
-            <li title="留言本">
-                <!--modify-->
-                <a href="main.html">
-                    留言本
-                </a>
-			</li>
+        <ul class="toolbar-left-menus child_line_block">
+            <a href="main.html" title="首页">
+				<button class="btnsize-120-48 custom-btn btn-9" >
+                    <span>首页</span>
+				</button>
+            </a>
+            <a href="main.html" title="局域网传输">
+				<button class="btnsize-120-48 custom-bt btn-7">
+                    <span>局域网传输</span>
+				</button>
+            </a>
+            <a href="main.html" title="留言本">
+				<button class="btnsize-120-48 custom-btn btn-8">
+                <span>留言本</span>
+				</button>  
+			</a>
         </ul>
 		</div>
 		<!--跳转网页结束-->
 		<!--输入框与搜索键-->
-		<div class="toolbar-center child_horizontal test_box_style_2">
+		<div class="toolbar-center child_horizontal">
 		<input id="toolbar-search-input"
 			   maxlength="2000"
 			   autocomplete="off"
@@ -48,29 +47,28 @@
                placeholder="add framework support"
 			   style="text-indent: 12px;">
         <button id="toolbar-search-button">
-			<i></i>
 			<span>搜索</span>
 		</button>
 		</div>
 		<!--输入框与搜索键结束-->
 		<!--右侧用户信息-->
-		<div class="toolbar-right child_horizontal test_box_style_3">
-		<div class="toolbar-right-onlyUser child_horizontal">
-            <div class="toolbar-right-btn-user">
-                <a class="common_box" href="main.html">
-                    用户
-                </a>
-            </div>
-            <div class="toolbar-right-btn-shopping">
-                <a class="common_box" href="main.html">
-                    购物车
-                </a>
-            </div>
-            <div class="toolbar-right-btn-logging">
-                <a class="common_box" href="main.html">
-                    登录
-                </a>
-            </div>
+		<div class="toolbar-right child_horizontal">
+		<div class="toolbar-right-onlyUser child_line_block">
+            <a href="main.html">
+				<button class="btnsize-120-48 custom-btn btn-1">
+                    <span>用户</span>
+				</button>
+            </a>
+            <a href="main.html">
+				<button class="btnsize-120-48 custom-btn btn-2">
+                    <span>购物车</span>
+				</button>
+            </a>
+            <a href="main.html">
+				<button class="btnsize-120-48 custom-btn btn-3">
+                    <span>登录</span>
+				</button>
+            </a>
         </div>
 		</div>
 		<!--右侧用户信息结束-->
@@ -220,7 +218,7 @@
             </ul>
         </div>
         <!--        文件容纳器-->
-        <div class="file-choose-container child_box file_container_size common_child_spacing_limit_5 common_child_pos_limit_5">
+        <div class="file-choose-container child_common_box_2 file_container_size common_child_spacing_limit_5 common_child_pos_limit_5">
             <!--            文件块-->
             <div class="file">
                 <!--                点击链接跳转到更具体的介绍页面-->
