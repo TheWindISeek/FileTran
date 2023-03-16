@@ -179,6 +179,7 @@ a:hover
     background-color: #797979;
     overflow-y: auto;
     overflow-x: hidden;
+    padding-top: 10px;
 }
 .file-choose-filter {
     margin-left: 10px;
