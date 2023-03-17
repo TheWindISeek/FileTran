@@ -14,12 +14,14 @@ a:link,a:visited{
 	/*font-size:24pt;*/
 	color:#bfbfbf;
 	text-decoration:none;
+    font-family: SimHei;
 }
 a:hover
 {
 	/*font-size:24pt*/
 	color:#dfdfdf;
 	text-decoration:none;
+    font-family: SimHei;
 }
 .sidebar-checkbox ul li {
 	/*去掉列表圆点*/

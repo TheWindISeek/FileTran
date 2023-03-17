@@ -1,105 +1,194 @@
 html,body{
-    /*强制网页显示为全屏大小,横向不可滚动纵向可以滚动*/
-    margin: 0px;
-	width:1920px;
-	height:1680px;
+    width: 100%;
+    height: 100%;
     overflow-x: hidden;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-	background-color: darkgray;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    color: #9cdcfe;
+    font-family: SimHei;
+}
+a:link,a:visited{
+	font-family:Segoe UI Light;
+	font-size:15pt;
+	color:#bfbfbf;
+	text-decoration:none;
+    font-family: SimHei;
+}
+a:hover
+{
+	font-size:15pt;
+	color:#dfdfdf;
+	text-decoration:none;
+    font-family: SimHei;
+}
+.container_background{
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #0000007f;
+    position: fixed;
+}
+.container_box {
+    border-style: none;
+    width: 750px;
+    height: 500px;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px;
 }
 .top {
-    width: 1820px;
-    height: 134px;
+    width: 600px;
+    height: 50px;
     margin-top: 10px;
     margin-bottom: 10px;
-    position: absolute;
-    top: 85px;
-    left: 82px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    color: #ffffff;
 }
 .bottom{
-    width: 1803px;
-    height: 1290px;
-    position: absolute;
-    left: 85px;
-    top: 274px;
+    width: 600px;
+    height: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
 }
-
-.left {
-    position: absolute;
-    left: 58px;
-    top: 70px;
+.bottom_container{
+    width: inherit;
+    height: inherit;
+    display: inline-flex;
 }
-.left * {
-    width: 676px;
-    height: 1074px;
-    float: left;
+.left_container{
+	flex:1;
+	display: inline;
+	display: flex;
+}
+.right_container{
+    display: flex;
+    flex: 1.5;
+    margin-right: 10px;
+}
+.left{
+    width: 200px;
+    height: 350px;
+    margin: auto;
+    display: flex;
+    border-radius: 10px;
+}
+.left_logo {
+    width: 200px;
+    height: 300px;
+    margin: auto;
+}
+.left-background {
+    margin: auto;
 }
 .right {
-    width: 873px;
-    height: 1074px;
-    float: left;
-    position: absolute;
-    left: 865px;
-    top: 70px;
+    margin-left: 10px auto;
+    margin-right: 10px auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 300px;
+    height: 350px;
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
 }
-
 .right-login {
-    width: 797px;
-    height: 754px;
-    position: absolute;
-    left: 49px;
-    top: 46px;
+    width: 300px;
+    height: 250px;
+    margin: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
 }
-.right-login-info {
-    width: 681px;
-    height: 145px;
-    position: absolute;
-    left: 49px;
-    top: 400px;
-}
-.right-login-userName {
-    width: 681px;
-    height: 126px;
-    position: absolute;
-    left: 49px;
-    top: 265px;
-}
-.right-login-password {
-    width: 681px;
-    height: 145px;
-    position: absolute;
-    left: 49px;
-    top: 524px;
-}
-
-.right-login-log {
-    width: 681px;
-    height: 145px;
-    position: absolute;
-    left: 49px;
-    top: 66px;
+.right-login >*{
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .right-other {
-    width: 797px;
-    height: 172px;
-    position: absolute;
-    left: 49px;
-    top: 854px;
+    width: 300px;
+    height: 48px;
+	margin: auto;
+	margin-top: 5px;
+	display: inline-flex;
+}
+.right-login-child >*{
+	margin: auto;
+}
+.right-login-info {
+    width: 280px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    flex: auto;
+    display: flex;
+    border-radius: 10px;
+}
+.right-login-userName {
+    width: 280px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    flex: auto;
+    display: flex;
+    border-radius: 10px;
+}
+.right-login-password {
+    width: 280px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    flex: auto;
+    display: flex;
+    border-radius: 10px;
+}
+.right-login-log {
+    width: 280px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    flex: auto;
+    display: flex;
+    border-radius: 10px;
 }
 .right-sign-up {
-    width: 247px;
-    height: 121px;
-    position: absolute;
-    left: 39px;
-    top: 26px;
+    width: 130px;
+    height: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
 }
 .right-forget-password {
-    width: 337px;
-    height: 121px;
-    position: absolute;
-    left: 400px;
-    top: 26px;
+    width: 130px;
+    height: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+.l-relative{
+	display: inline-flex;
+}
+.l-relative >p{
+    width: 60px;
+    height: 20px;
+    flex: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+.l-relative>input{
+	height: 20px;
+	flex: 1;
+	margin-top: auto;
+	margin-bottom: auto;
 }
