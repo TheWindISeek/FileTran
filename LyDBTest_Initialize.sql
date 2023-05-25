@@ -337,10 +337,52 @@ BEGIN
 END$$
 
 DROP PROCEDURE IF EXISTS `File_Upload`$$
-/*上传和下载未实装*/
+CREATE PROCEDURE `File_Upload`(IN `F_Name` VARCHAR(64), IN `F_Creator` INT(11) UNSIGNED, IN `F_Path` INT(11) UNSIGNED, IN `F_Content` BLOB, OUT `NEW_ID` INT(11) UNSIGNED)DETERMINISTIC
+BEGIN
+    DECLARE `Blob_ID` INT(11) UNSIGNED;
+    /*创建blob id*/
+    CALL Private_Blob_Create(`F_Content`,`Blob_ID`);
+    /*创建file id*/
+    CALL Private_File_CreateFile(3,`F_Name`,`F_Creator`,`NEW_ID`);
+    /*把file id的blob字段修改*/
+    UPDATE `Files` SET `Files`.`File_Data` = `Blob_ID` WHERE ( `Files`.`File_Id` = `NEW_ID` );
+    /*在blob使用表里创建关系*/
+    CALL Private_Blob_Binding(`Blob_ID`,`NEW_ID`,NULL);
+    /*在文件关联表里创建关系*/
+    CALL Private_File_Binding(`F_Path`,`NEW_ID`);
+END$$
 
 DROP PROCEDURE IF EXISTS `File_Download`$$
-/*上传和下载未实装*/
+CREATE PROCEDURE `File_Download`(IN `F_ID` VARCHAR(64), OUT `F_Content` BLOB)DETERMINISTIC
+BEGIN
+    /*获得Blob的id*/
+    DECLARE `Blob_ID` INT(11) UNSIGNED;
+    SELECT `File_Data` INTO `Blob_ID` FROM `Files` WHERE `Files`.`File_Id` = `F_ID`;
+    /*获得Blob的内容*/
+    SELECT `Blob_Content` INTO `F_Content` FROM `Blobs` WHERE `Blobs`.`Blob_Id` = `File_Data`;
+END$$
+
+DROP PROCEDURE IF EXISTS `File_GetIcon`$$
+CREATE PROCEDURE `File_GetIcon`(IN `F_ID` VARCHAR(64), OUT `F_Icon` BLOB)DETERMINISTIC
+BEGIN
+    /*获得默认Blob和自定义Blob的id*/
+    DECLARE `Default_Blob_ID` INT(11) UNSIGNED;
+    DECLARE `Custom_Blob_ID` INT(11) UNSIGNED;
+    SELECT `File_Icon` INTO `Default_Blob_ID` FROM `Files` WHERE `Files`.`File_Id` = `F_ID`;
+    SELECT `File_Icon_Custom` INTO `Custom_Blob_ID` FROM `Files` WHERE `Files`.`File_Id` = `F_ID`;
+    /*获得Blob对应的内容,如果不存在自定义图标则获取默认图标*/
+    IF (`Custom_Blob_ID` IS NULL) THEN
+        BEGIN
+            /*从默认图标表里选取icon*/
+            SELECT `Icon` INTO `F_Icon` FROM `Default_Icon` WHERE `Default_Icon`.`Id` = `Default_Blob_ID`;
+        END
+    ELSE
+        BEGIN
+            /*从自定义图标表里选取icon*/
+            SELECT `Blob_Content` INTO `F_Icon` FROM `Blobs` WHERE `Blobs`.`Blob_Id` = `Custom_Blob_ID`;
+        END
+    END IF;
+END$$
 
 DROP PROCEDURE IF EXISTS `Private_File_CreateFile`$$
 CREATE PROCEDURE `Private_File_CreateFile`(IN `F_TYPE` INT(11) UNSIGNED,IN `F_NAME` VARCHAR(64),IN `F_CREATOR` INT(11) UNSIGNED,OUT `NEW_ID` INT(11) UNSIGNED) DETERMINISTIC 
@@ -674,9 +716,11 @@ DROP TRIGGER IF EXISTS `Before_Insert_On_Blob` $$
 CREATE TRIGGER `Before_Insert_On_Blob` BEFORE INSERT ON `Blobs` FOR EACH ROW
 BEGIN
     /*自动计算BLOB实例的长度*/
+    /*
     DECLARE `NEW_LENGTH` INT(11) UNSIGNED;
     SELECT dbms_lob.getLength(`NEW`.`Blob_Content`) INTO `NEW_LENGTH`;
     SET `NEW`.`Blob_Length` = `NEW_LENGTH`;
+    */
 END$$
 
 DROP TRIGGER IF EXISTS `After_Delete_On_Blob_Usage` $$
